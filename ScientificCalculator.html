@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <script type="text/javascript">
+    //  var element, element3
+  /*    element = document.getElememtById("deg")
+      element2 = document.getElementById("rad")
+      element2.style = "border: solid red" */
+      var selection = "rad"
+      
+      function insert(num){
+        var text = document.form.textinput.value
+        document.form.textinput.value = text + num
+      }
+      
+      function clean(){
+        document.form.textinput.value = ""
+      }
+      
+      function calculate(){
+        var text = document.form.textinput.value
+        document.form.textinput.value = eval(text)
+      }
+      
+      function back(){
+        var text = document.form.textinput.value
+        document.form.textinput.value = text.substring(0,text.length-1)
+      }
+      
+      function calc_sin(){
+        var text = document.form.textinput.value
+        if (selection == "rad"){
+          document.form.textinput.value = Math.sin(text)
+        } else if (selection == "deg"){
+          document.form.textinput.value = Math.sin(text * (Math.PI / 180))
+        }
+      }
+      
+      function calc_cos(){
+        var text = document.form.textinput.value
+        if (selection == "rad"){
+          document.form.textinput.value = Math.tan(text)
+        } else if (selection == "deg"){
+          document.form.textinput.value = Math.tan(text * (Math.PI / 180))
+        }
+      }
+      
+      function calc_tan(){
+        var text = document.form.textinput.value
+        if (selection == "rad"){
+          document.form.textinput.value = Math.cos(text)
+        } else if (selection == "deg"){
+          document.form.textinput.value = Math.cos(text * (Math.PI / 180))
+        }
+      }
+      
+      function calc_sqrt(){
+      var text = document.form.textinput.value
+      document.form.textinput.value = Math.sqrt(text)
+      }
+      
+      function calc_percent(){
+      var text = document.form.textinput.value
+      document.form.textinput.value = text/100
+      }
+      
+      function change_label_selection(){
+        var label = document.getElementById("info")
+        label.innerHTML = "<b>"+selection.toUpperCase()+"</b>"
+      }
+      
+      function calc_deg(){
+        var element = document.getElementById("deg")
+        element.style = "border: solid red"
+        var element2 = document.getElementById("rad")
+        element2.style = "border solid"
+        
+        selection = "deg" //Set selection to deg
+        change_label_selection()
+        
+        /* var text = document.form.textinput.value
+        var out = text * (Math.PI / 180)
+        document.form.textinput.value = out */
+      }
+      
+      function calc_rad(){
+        var element2 = document.getElementById("rad")
+        element2.style = "border: solid red"
+        var element = document.getElementById("deg")
+        element.style = "border: solid"
+        
+        selection = "rad" //Set selection to rad
+        change_label_selection()
+        
+        /* var text = document.form.textinput.value
+        var out = (text / 180) * Math.PI
+        document.form.textinput.value = out */
+      }
+    </script>
+    
+    <style>
+      button {
+        width: 80;
+        height: 80;
+        font-size: 25;
+        border: solid;
+      }
+      
+      .textinput {
+        width: 505;
+        height: 50;
+        border: solid;
+        font-size: 25;
+        color: #43d995;
+      }
+      
+      .main {
+        position: absolute;
+        border: solid;
+        background: linear-gradient(yellow, green);
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class=main>
+    <h1>HTML Scientific Calculator</h1>
+    <p align="right" id="info"><b>RAD</b></p>
+    <form name="form">
+      <input name="textinput" class="textinput" />
+    </form>
+    
+    <table>
+      <tr>
+        <td><button onclick="clean()">C</button></td>
+        <td><button onclick="back()">DEL</button></td>
+        <td><button onclick="insert('+')">+</button></td>
+        <td><button onclick="insert('-')">-</button></td>
+        <td><button onclick="calc_sin()">sin</button></td>
+        <td><button onclick="insert('**')">^</button></td>
+      </tr>
+      <tr>
+      <td><button onclick="insert(1)">1</button></td>
+      <td><button onclick="insert(2)">2</button></td>
+      <td><button onclick="insert(3)">3</button></td>
+      <td><button onclick="insert('*')">*</button></td>
+      <td><button onclick="calc_cos()">cos</button></td>
+      <td><button id="deg" onclick="calc_deg()">deg</button></td>
+      </tr>
+      <tr>
+      <td><button onclick="insert(4)">4</button></td>
+      <td><button onclick="insert(5)">5</button></td>
+      <td><button onclick="insert(6)">6</button></td>
+      <td><button onclick="insert('/')">/</button></td>
+      <td><button onclick="calc_tan()">tan</button></td>
+      <td><button id="rad" style="border: solid red" onclick="calc_rad()">rad</button></td>
+      </tr>
+      <tr>
+      <td><button onclick="insert(7)">7</button></td>
+      <td><button onclick="insert(8)">8</button></td>
+      <td><button onclick="insert(9)">9</button></td>
+      <td><button onclick="calc_sqrt()">sqrt</button></td>
+      <td><button onclick="insert('(')">(</button></td>
+      <td rowspan = 2><button style="height:165" onclick="calculate()">=</button></td>
+      </tr>
+      <tr>
+      <td colspan=2><button style="width:165" onclick="insert(0)">0</button></td>
+      <td><button onclick="insert('.')">.</button></td>
+      <td><button onclick="calc_percent()">%</button></td>
+      <td><button onclick="insert(')')">)</button></td>
+      </tr>
+    </table>
+    </div>
+  </body>
+</html>
