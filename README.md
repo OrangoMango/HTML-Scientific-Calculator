@@ -1,5 +1,4 @@
 # HTML-Scientific-Calculator
-## Developing, adding another column
 
 A scientific calculator made with HTML, JavaScript and CSS. <br>
 Try also the normal calculator: https://www.github.com/OrangoMango/HTML-Calculator !
