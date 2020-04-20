@@ -19,6 +19,7 @@
         <td><button onclick="insert('+')">+</button></td>
         <td><button onclick="insert('-')">-</button></td>
         <td><button onclick="calc_sin()">sin</button></td>
+        <td><button onclick="insert('**')">^</button></td>
       </tr>
       <tr>
       <td><button onclick="insert(1)">1</button></td>
@@ -26,6 +27,7 @@
       <td><button onclick="insert(3)">3</button></td>
       <td><button onclick="insert('*')">*</button></td>
       <td><button onclick="calc_cos()">cos</button></td>
+      <td><button onclick="calc_deg()">deg</button></td>
       </tr>
       <tr>
       <td><button onclick="insert(4)">4</button></td>
@@ -33,10 +35,26 @@
       <td><button onclick="insert(6)">6</button></td>
       <td><button onclick="insert('/')">/</button></td>
       <td><button onclick="calc_tan()">tan</button></td>
+      <td><button onclick="calc_rad()">rad</button></td>
       </tr>
       <tr>
       <td><button onclick="insert(7)">7</button></td>
       <td><button onclick="insert(8)">8</button></td>
+      <td><button onclick="insert(9)">9</button></td>
+      <td><button onclick="calc_sqrt()">sqrt</button></td>
+      <td><button onclick="insert('(')">(</button></td>
+      <td rowspan = 2><button style="height:165" onclick="calculate()">=</button></td>
+      </tr>
+      <tr>
+      <td colspan=2><button style="width:165" onclick="insert(0)">0</button></td>
+      <td><button onclick="insert('.')">.</button></td>
+      <td><button onclick="calc_percent()">%</button></td>
+      <td><button onclick="insert(')')">)</button></td>
+      </tr>
+    </table>
+    </div>
+  </body>
+</html>
       <td><button onclick="insert(9)">9</button></td>
       <td><button onclick="calc_sqrt()">sqrt</button></td>
       <td rowspan = 2><button style="height:165" onclick="calculate()">=</button></td>
