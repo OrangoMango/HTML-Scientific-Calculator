@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <script src="script.js" type="text/javascript">   
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <body>
+    <div class=main>
+    <h1>HTML Scientific Calculator</h1>
+    <p align="right" id="info"><b>RAD</b></p>
+    <form name="form">
+      <input name="textinput" class="textinput" />
+    </form>
+    
+    <table>
+      <tr>
+        <td><button onclick="clean()">C</button></td>
+        <td><button onclick="back()">DEL</button></td>
+        <td><button onclick="insert('+')">+</button></td>
+        <td><button onclick="insert('-')">-</button></td>
+        <td><button onclick="calc_sin()">sin</button></td>
+        <td><button onclick="insert('**')">^</button></td>
+        <td rowspan = 2><button style="height:165" onclick="calc_exp()">exp</button></td>
+      </tr>
+      <tr>
+      <td><button onclick="insert(1)">1</button></td>
+      <td><button onclick="insert(2)">2</button></td>
+      <td><button onclick="insert(3)">3</button></td>
+      <td><button onclick="insert('*')">*</button></td>
+      <td><button onclick="calc_cos()">cos</button></td>
+      <td><button id="deg" onclick="calc_deg()">deg</button></td>
+      </tr>
+      <tr>
+      <td><button onclick="insert(4)">4</button></td>
+      <td><button onclick="insert(5)">5</button></td>
+      <td><button onclick="insert(6)">6</button></td>
+      <td><button onclick="insert('/')">/</button></td>
+      <td><button onclick="calc_tan()">tan</button></td>
+      <td><button id="rad" style="border: solid red" onclick="calc_rad()">rad</button></td>
+      <td><button><a href="https://www.youtube.com/watch?v=nc0vprSyOD0">YT</a><br /><a href="https://github.com/OrangoMango/HTML-Scientific-Calculator">GIT</a></button></td>
+      </tr>
+      <tr>
+      <td><button onclick="insert(7)">7</button></td>
+      <td><button onclick="insert(8)">8</button></td>
+      <td><button onclick="insert(9)">9</button></td>
+      <td><button onclick="calc_sqrt()">sqrt</button></td>
+      <td><button onclick="insert('(')">(</button></td>
+      <td rowspan = 2><button style="height:165" onclick="calc_log()">ln</button></td>
+      <td rowspan = 2><button style="height:165" onclick="calculate()">=</button></td>
+      </tr>
+      <tr>
+      <td colspan=2><button style="width:165" onclick="insert(0)">0</button></td>
+      <td><button onclick="insert('.')">.</button></td>
+      <td><button onclick="calc_percent()">%</button></td>
+      <td><button onclick="insert(')')">)</button></td>
+      </tr>
+    </table>
+    </div>
+  </body>
+</html>
