@@ -1,3 +1,9 @@
+/*
+Program by
+OrangoMango 2020
+*/
+
+
 var selection = "rad"
      
 function insert(num){
